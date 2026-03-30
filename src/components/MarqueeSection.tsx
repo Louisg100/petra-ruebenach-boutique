@@ -23,7 +23,7 @@ const BrandLogos = () => (
         key={i}
         src={brand.src}
         alt={brand.alt}
-        className="h-8 md:h-10 w-auto object-contain mx-8 md:mx-12 shrink-0 opacity-70"
+        className={`${brand.className || "h-8 md:h-10"} w-auto object-contain mx-8 md:mx-12 shrink-0 opacity-70`}
         loading="lazy"
       />
     ))}
