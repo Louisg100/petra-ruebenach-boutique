@@ -14,7 +14,7 @@ const brands = [
   { src: windsor, alt: "Windsor", className: "h-5 md:h-7" },
   { src: bloom, alt: "Bloom" },
   { src: glamotti, alt: "Glamotti" },
-] as const;
+];
 
 const BrandLogos = () => (
   <>
