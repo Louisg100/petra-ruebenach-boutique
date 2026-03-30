@@ -7,11 +7,11 @@ import raffaelloRossi from "@/assets/brands/raffaello-rossi.png";
 import windsor from "@/assets/brands/windsor.svg";
 
 const brands = [
-  { src: herzensangelegenheit, alt: "Herzensangelegenheit" },
+  { src: herzensangelegenheit, alt: "Herzensangelegenheit", className: "h-5 md:h-7" },
   { src: raffaelloRossi, alt: "Raffaello Rossi" },
   { src: citizensOfHumanity, alt: "Citizens of Humanity" },
   { src: ilseJacobsen, alt: "Ilse Jacobsen" },
-  { src: windsor, alt: "Windsor" },
+  { src: windsor, alt: "Windsor", className: "h-5 md:h-7" },
   { src: bloom, alt: "Bloom" },
   { src: glamotti, alt: "Glamotti" },
 ];
@@ -23,7 +23,7 @@ const BrandLogos = () => (
         key={i}
         src={brand.src}
         alt={brand.alt}
-        className="h-8 md:h-10 w-auto object-contain mx-8 md:mx-12 shrink-0 opacity-70"
+        className={`${brand.className || "h-8 md:h-10"} w-auto object-contain mx-8 md:mx-12 shrink-0 opacity-70`}
         loading="lazy"
       />
     ))}
