@@ -1,37 +1,44 @@
+import glamotti from "@/assets/brands/glamotti.png";
+import herzensangelegenheit from "@/assets/brands/herzensangelegenheit.png";
+import ilseJacobsen from "@/assets/brands/ilse-jacobsen.webp";
+import bloom from "@/assets/brands/bloom.png";
+import citizensOfHumanity from "@/assets/brands/citizens-of-humanity.webp";
+import raffaelloRossi from "@/assets/brands/raffaello-rossi.png";
+import windsor from "@/assets/brands/windsor.svg";
+
 const brands = [
-  "HERZENSANGELEGENHEIT",
-  "MAX MARA",
-  "RAFFAELLO ROSSI",
-  "CITIZENS OF HUMANITY",
-  "ILSE JACOBSEN",
-  "ATELIER CAPITANA",
-  "WINDSOR",
-  "BLOOM CLOTHING",
-  "FIONA COLLECTION",
+  { src: herzensangelegenheit, alt: "Herzensangelegenheit" },
+  { src: raffaelloRossi, alt: "Raffaello Rossi" },
+  { src: citizensOfHumanity, alt: "Citizens of Humanity" },
+  { src: ilseJacobsen, alt: "Ilse Jacobsen" },
+  { src: windsor, alt: "Windsor" },
+  { src: bloom, alt: "Bloom" },
+  { src: glamotti, alt: "Glamotti" },
 ];
 
-const BrandList = () => (
+const BrandLogos = () => (
   <>
     {brands.map((brand, i) => (
-      <span key={i} className="flex items-center shrink-0">
-        <span className="font-sans text-foreground text-xs md:text-sm tracking-[0.25em] uppercase whitespace-nowrap">
-          {brand}
-        </span>
-        <span className="mx-4 md:mx-6 text-primary text-sm">◆</span>
-      </span>
+      <img
+        key={i}
+        src={brand.src}
+        alt={brand.alt}
+        className="h-8 md:h-10 w-auto object-contain mx-8 md:mx-12 shrink-0 opacity-70"
+        loading="lazy"
+      />
     ))}
   </>
 );
 
 const MarqueeSection = () => {
   return (
-    <section className="w-full bg-background py-6 overflow-hidden">
+    <section className="w-full bg-background py-8 md:py-10 overflow-hidden">
       <div className="flex animate-marquee w-max">
-        <div className="flex">
-          <BrandList />
+        <div className="flex items-center">
+          <BrandLogos />
         </div>
-        <div className="flex">
-          <BrandList />
+        <div className="flex items-center">
+          <BrandLogos />
         </div>
       </div>
     </section>
