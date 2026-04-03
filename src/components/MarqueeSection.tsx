@@ -7,7 +7,7 @@ import raffaelloRossi from "@/assets/brands/raffaello-rossi.png";
 import windsor from "@/assets/brands/windsor.svg";
 
 const brands = [
-  { src: herzensangelegenheit, alt: "Herzensangelegenheit", className: "h-5 md:h-7" },
+  { src: herzensangelegenheit, alt: "Herzensangelegenheit", className: "h-6 md:h-8" },
   { src: raffaelloRossi, alt: "Raffaello Rossi" },
   { src: citizensOfHumanity, alt: "Citizens of Humanity" },
   { src: ilseJacobsen, alt: "Ilse Jacobsen" },
